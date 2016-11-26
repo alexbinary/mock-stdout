@@ -28,4 +28,13 @@ describe('stdout mock', function () {
       expect(stdoutMock._data).to.equal('')
     })
   })
+  describe('#_setup()', function () {
+    it('replace process.stdout with mock', function () {
+      let stdoutMock = makeStdoutMock()
+      stdoutMock._setup()
+      stdoutMock._resetData()
+      process.stdout.write('foo')
+      expect(stdoutMock._data).to.equal('foo')
+    })
+  })
 })
