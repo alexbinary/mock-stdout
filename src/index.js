@@ -1,4 +1,6 @@
 
+let original = process.stdout
+
 function create () {
   let instance = {
     _data: '',
@@ -6,8 +8,14 @@ function create () {
       this._data = ''
     },
     _setup: function () {
+      original = process.stdout
       Object.defineProperty(process, 'stdout', {
         value: this
+      })
+    },
+    _restore: function () {
+      Object.defineProperty(process, 'stdout', {
+        value: original
       })
     },
     write: function (data) {

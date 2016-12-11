@@ -55,4 +55,18 @@ describe('stdout mock', function () {
       // ## End
     })
   })
+  describe('#_restore()', function () {
+    it('restore default process.stdout', function () {
+      // ## Setup
+      let mock = mockStdout.create()
+      mock._resetData()
+      mock._setup()
+      mock._restore()
+      // ## TEST
+      process.stdout.write('foo')
+      // ## Assert
+      expect(mock._data).to.equal('')
+      // ## End
+    })
+  })
 })
