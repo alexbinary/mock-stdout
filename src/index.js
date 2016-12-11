@@ -1,5 +1,5 @@
 
-function makeStdoutMock () {
+function create () {
   let instance = {
     _data: '',
     _resetData: function () {
@@ -18,4 +18,6 @@ function makeStdoutMock () {
   return instance
 }
 
-module.exports = makeStdoutMock
+module.exports = {
+  create
+}
