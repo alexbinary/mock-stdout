@@ -1,6 +1,6 @@
 {
   "name": "mock-stdout",
-  "description": "Simple mock for node stdout",
+  "description": "Simple mock for node stdout 👻",
   "version": "0.1.1",
   "main": "src/index.js",
   "author": "Alexandre Bintz <alexandre@bintz.io>",
