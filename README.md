@@ -8,7 +8,7 @@ Install with npm/yarn :
 ```
 $ npm install https://github.com/alexbinary/mock-stdout.git
 
-$yarn add https://github.com/alexbinary/mock-stdout.git
+$ yarn add https://github.com/alexbinary/mock-stdout.git
 ```
 
 # Usage
