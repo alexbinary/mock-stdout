@@ -3,7 +3,7 @@ let expect = require('chai').expect
 
 let mockStdout = require('../src/index')
 
-describe('stdout mock', function () {
+describe('mock-stdout', function () {
   describe('#write()', function () {
     it('takes data as input', function () {
       // ## Setup
